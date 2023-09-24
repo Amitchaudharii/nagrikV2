@@ -8,28 +8,212 @@
       href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <script src="assets/js/main.js"></script>
+
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    /> -->
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/main.js"></script>
+
     <title>NagrikV2</title>
   </head>
   <body>
+    <!-- HEADER -->
+
+    <header class="header m-b-30">
+      <div class="container">
+        <div class="header-top">
+          <ul class="trending-tags gap-30">
+            <li><a href="#" class="tags-list">Trending</a></li>
+            <li><a href="#" class="tags-list">Entertenment</a></li>
+            <li><a href="#" class="tags-list">Sports</a></li>
+            <li><a href="#" class="tags-list">Films</a></li>
+            <li><a href="#" class="tags-list">Sarkari bank</a></li>
+            <li><a href="#" class="tags-list">Police</a></li>
+          </ul>
+          <div class="ads gap-30">
+            <a href="#">
+              <img src="images/adslarge.gif" alt="ads" />
+            </a>
+            <a href="#">
+              <img src="images/adslarge02.gif" alt="ads" />
+            </a>
+          </div>
+        </div>
+
+        <div class="header-logo">
+          <div class="logo-holder">
+            <a href="#">
+              <img src="images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="update_date gap-10">
+            <a href="#"> <span>Sat, Aug 19, 2023 </span> </a>|
+            <a href="#">
+              <span> sanibar, vadra, 2080</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <div class="container">
+          <div class="nav-bar-wrapper">
+            <div class="nav-list-wrapper">
+              <button id="toggleSidebar" class="hamburger-button">
+                <i class="fas fa-bars"></i>
+              </button>
+              <nav class="nav">
+                <ul>
+                  <li>
+                    <a href="#" class="nav-items">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">About</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">List</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">Contact</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">Carrer</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">More &dtrif;</a>
+                    <ul class="more-dropdown">
+                      <li><a href="#">Web Development</a></li>
+                      <li><a href="#">Web Design</a></li>
+                      <li><a href="#">Illustration</a></li>
+                      <li><a href="#">Iconography</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <form action="" class="search-bar flex gap-10">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="search"
+                name="search"
+                placeholder="Search"
+                pattern=".*\S.*"
+                required
+                class="search-input"
+              />
+              <!-- <button class="search-btn" type="submit">
+                <span>Search</span>
+              </button> -->
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="side-header">
+          <a href="#"
+            ><img class="logo_icon" src="images/logo.png" alt="logo"
+          /></a>
+
+          <button type="button" id="closeSidebar" class="toggle_close">
+            <span class="fas fa-times"></span>
+          </button>
+        </div>
+      </div>
+      <div class="overlay" id="overlay"></div>
+      <!-- SIDEBAR END -->
+    </header>
+
+    <!-- HEADER END -->
+
+    <!-- ADS -->
+    <div class="ads gap-10">
+      <div class="container">
+        <a href="#">
+          <img src="images/adslarge02.gif" alt="ads" />
+        </a>
+      </div>
+    </div>
+    <!-- ADS END -->
+
     <main>
       <!-- MAIN NEWS SECTION -->
 
       <section class="main-news m-y-70">
         <div class="container">
-          <div class="main-news-holder">
+          <div class="main-news-holder gap-10 m-b-30">
             <h1 class="main-news-title">
               <a href="#">
                 शान्ति प्रक्रियामा अन्तर्राष्ट्रिय समुदायको सद्‍भाव जुटाउने
                 प्रचण्ड प्रयास</a
               >
             </h1>
+            <div class="flex gap-30 m-b-30">
+              <div class="auth-profile gap-10">
+                <a href="#" class="auth-profile-holder">
+                  <img src="images/news17.jpg" alt="profile" />
+                </a>
+                <a href="#" class="auther-name">John Doe</a>
+              </div>
+              <a href="#" class="news-time-history color-black">
+                <i class="fas fa-history"></i>
+                <span>10 Hours Ago</span>
+              </a>
+            </div>
+          </div>
+          <div class="main-news-holder gap-10">
+            <h1 class="main-news-title">
+              <a href="#">
+                शान्ति प्रक्रियामा अन्तर्राष्ट्रिय समुदायको सद्‍भाव जुटाउने
+                प्रचण्ड प्रयास</a
+              >
+            </h1>
+            <div class="flex gap-30 m-b-30">
+              <div class="auth-profile gap-10">
+                <a href="#" class="auth-profile-holder">
+                  <img src="images/news03.jpg" alt="profile" />
+                </a>
+                <a href="#" class="auther-name">John Doe</a>
+              </div>
+              <a href="#" class="news-time-history color-black">
+                <i class="fas fa-history"></i>
+                <span>5 Days Ago</span>
+              </a>
+            </div>
+            <div class="main-news-thumb">
+              <a href="#"
+                ><div class="img-holder">
+                  <img src="images/news01.jpg" alt="" /></div
+              ></a>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- MAIN NEWS SECTION END -->
+
+      <!-- ADS -->
+      <div class="ads gap-10">
+        <div class="container">
+          <a href="#">
+            <img src="images/adslarge.gif" alt="ads" />
+          </a>
+        </div>
+      </div>
+      <!-- ADS END -->
 
       <!-- THUMBNAIL LARGE SECTION -->
 
@@ -38,7 +222,7 @@
           <div class="thumbnail-large gap-30">
             <a href="#">
               <div class="img-holder">
-                <img src="assets/images/John-Wick.webp" alt="news img" />
+                <img src="images/John-Wick.webp" alt="news img" />
               </div>
             </a>
             <div class="thumbnail-content">
@@ -102,7 +286,7 @@
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news01.jpg" alt="news img" />
+                      <img src="images/news01.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -118,7 +302,7 @@
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news02.jpg" alt="news img" />
+                      <img src="images/news02.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -134,7 +318,7 @@
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news03.jpg" alt="news img" />
+                      <img src="images/news03.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -150,7 +334,7 @@
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news04.jpg" alt="news img" />
+                      <img src="images/news04.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -166,7 +350,7 @@
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news05.jpg" alt="news img" />
+                      <img src="images/news05.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -184,17 +368,17 @@
             <div class="latest-news-right">
               <a href="#" class="ads-wrap">
                 <div class="ads-holder">
-                  <img src="assets/images/ads03.gif" alt="" />
+                  <img src="images/ads03.gif" alt="" />
                 </div>
               </a>
               <a href="#" class="ads-wrap">
                 <div class="ads-holder">
-                  <img src="assets/images/ads02.gif" alt="" />
+                  <img src="images/ads02.gif" alt="" />
                 </div>
               </a>
               <a href="#" class="ads-wrap">
                 <div class="ads-holder">
-                  <img src="assets/images/ads03.gif" alt="" />
+                  <img src="images/ads03.gif" alt="" />
                 </div>
               </a>
             </div>
@@ -293,11 +477,28 @@
                 <label class="label" for="tab-2">Popular</label>
               </div>
 
-              <div class="panel flex-col">
+              <div id="content-1" class="content flex-col">
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news06.jpg" alt="news img" />
+                      <img src="images/news06.jpg" alt="news img" />
+                    </div>
+                  </a>
+                  <div class="thumbnail-content">
+                    <a href="#" class="thumbnail-desc">
+                      Aut, deserunt asperiores a eum vel eveniet quae sed
+                      tenetur illum iusto, commodi error atque ipsa fugit,
+                    </a>
+                    <a href="#" class="news-date m-t-5">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span>june 23, 2023</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="thumbnail-small m-b-30">
+                  <a href="#">
+                    <div class="img-holder">
+                      <img src="images/news07.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -313,12 +514,13 @@
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news07.jpg" alt="news img" />
+                      <img src="images/news08.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
                     <a href="#" class="thumbnail-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aut, deserunt asperiores a eum vel eveniet quae sed
+                      tenetur illum iusto, commodi error atque ipsa fugit,
                     </a>
                     <a href="#" class="news-date m-t-5">
                       <i class="fas fa-calendar-alt"></i>
@@ -329,23 +531,7 @@
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news08.jpg" alt="news img" />
-                    </div>
-                  </a>
-                  <div class="thumbnail-content">
-                    <a href="#" class="thumbnail-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </a>
-                    <a href="#" class="news-date m-t-5">
-                      <i class="fas fa-calendar-alt"></i>
-                      <span>june 23, 2023</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="thumbnail-small m-b-30">
-                  <a href="#">
-                    <div class="img-holder">
-                      <img src="assets/images/news09.jpg" alt="news img" />
+                      <img src="images/news09.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -359,16 +545,17 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="panel flex-col">
+              <div id="content-2" class="content flex-col">
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news06.jpg" alt="news img" />
+                      <img src="images/news06.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
                     <a href="#" class="thumbnail-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      a eum vel eveniet quae sed tenetur illum iusto, commodi
+                      error atque ipsa fugit,
                     </a>
                     <a href="#" class="news-date m-t-5">
                       <i class="fas fa-calendar-alt"></i>
@@ -379,12 +566,13 @@
                 <div class="thumbnail-small m-b-30">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news07.jpg" alt="news img" />
+                      <img src="images/news07.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
                     <a href="#" class="thumbnail-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aut, deserunt asperiores a eum vel eveniet quae sed
+                      tenetur illum iusto, commodi error atque ipsa fugit,
                     </a>
                     <a href="#" class="news-date m-t-5">
                       <i class="fas fa-calendar-alt"></i>
@@ -392,12 +580,120 @@
                     </a>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- EXCLUSIVE NEWS SECTION END -->
+
+      <!-- THUMBNAIL SLIDER -->
+
+      <div class="thumb-slider-wrapper m-y-70">
+        <div class="container">
+          <div class="main-header">
+            <h1>GAMES</h1>
+            <a href="#" class="more-button">
+              <span>Learn more</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+          </div>
+          <div class="slider">
+            <div class="slider-holder">
+              <div class="thumbnail-holder">
+                <a href="#" class="slider-thumb">
+                  <img src="images/news13.jpg" alt="" />
+
+                  <div class="thumb-caption">
+                    <h1 class="thumb-heading m-b-10">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Molestiae obcaecati ex.
+                    </h1>
+                    <div class="news-time-history">
+                      <i class="fas fa-history"></i>
+                      <span>13 Min Ago</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="slider-holder">
+              <div class="thumbnail-holder">
+                <a href="#" class="slider-thumb">
+                  <img src="images/news14.jpg" alt="" />
+
+                  <div class="thumb-caption">
+                    <h1 class="thumb-heading m-b-10">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Molestiae obcaecati ex.
+                    </h1>
+                    <div class="news-time-history">
+                      <i class="fas fa-history"></i>
+                      <span>13 Min Ago</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="slider-holder">
+              <div class="thumbnail-holder">
+                <a href="#" class="slider-thumb">
+                  <img src="images/news15.jpg" alt="" />
+
+                  <div class="thumb-caption">
+                    <h1 class="thumb-heading m-b-10">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Molestiae obcaecati ex.
+                    </h1>
+                    <div class="news-time-history">
+                      <i class="fas fa-history"></i>
+                      <span>13 Min Ago</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="slider-holder">
+              <div class="thumbnail-holder">
+                <a href="#" class="slider-thumb">
+                  <img src="images/news12.jpg" alt="" />
+
+                  <div class="thumb-caption">
+                    <h1 class="thumb-heading m-b-10">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Molestiae obcaecati ex.
+                    </h1>
+                    <div class="news-time-history">
+                      <i class="fas fa-history"></i>
+                      <span>13 Min Ago</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="slider-holder">
+              <div class="thumbnail-holder">
+                <a href="#" class="slider-thumb">
+                  <img src="images/news11.jpg" alt="" />
+
+                  <div class="thumb-caption">
+                    <h1 class="thumb-heading m-b-10">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Molestiae obcaecati ex.
+                    </h1>
+                    <div class="news-time-history">
+                      <i class="fas fa-history"></i>
+                      <span>13 Min Ago</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- THUMBNAIL SLIDER END -->
 
       <!-- MOST READ NEWS SECTION -->
 
@@ -415,7 +711,7 @@
               <div class="thumbnail-medium m-b-30">
                 <a href="#">
                   <div class="img-holder">
-                    <img src="assets/images/news20.jpg" alt="news img" />
+                    <img src="images/news20.jpg" alt="news img" />
                   </div>
                 </a>
                 <div class="thumbnail-content">
@@ -455,7 +751,41 @@
               <div class="thumbnail-small m-b-30">
                 <a href="#">
                   <div class="img-holder">
-                    <img src="assets/images/news11.jpg" alt="news img" />
+                    <img src="images/news11.jpg" alt="news img" />
+                  </div>
+                </a>
+                <div class="thumbnail-content">
+                  <a href="#" class="thumbnail-desc">
+                    Aut, deserunt asperiores a eum vel eveniet quae sed tenetur
+                    illum iusto, commodi error atque ipsa fugit,
+                  </a>
+                  <a href="#" class="news-date m-t-5">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>june 23, 2023</span>
+                  </a>
+                </div>
+              </div>
+              <div class="thumbnail-small m-b-30">
+                <a href="#">
+                  <div class="img-holder">
+                    <img src="images/news05.jpg" alt="news img" />
+                  </div>
+                </a>
+                <div class="thumbnail-content">
+                  <a href="#" class="thumbnail-desc">
+                    Aut, deserunt asperiores a eum vel eveniet quae sed tenetur
+                    illum iusto, commodi error atque ipsa fugit,
+                  </a>
+                  <a href="#" class="news-date m-t-5">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>june 23, 2023</span>
+                  </a>
+                </div>
+              </div>
+              <div class="thumbnail-small m-b-30">
+                <a href="#">
+                  <div class="img-holder">
+                    <img src="images/news09.jpg" alt="news img" />
                   </div>
                 </a>
                 <div class="thumbnail-content">
@@ -471,12 +801,13 @@
               <div class="thumbnail-small m-b-30">
                 <a href="#">
                   <div class="img-holder">
-                    <img src="assets/images/news05.jpg" alt="news img" />
+                    <img src="images/news05.jpg" alt="news img" />
                   </div>
                 </a>
                 <div class="thumbnail-content">
                   <a href="#" class="thumbnail-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aut, deserunt asperiores a eum vel eveniet quae sed tenetur
+                    illum iusto, commodi error atque ipsa fugit,
                   </a>
                   <a href="#" class="news-date m-t-5">
                     <i class="fas fa-calendar-alt"></i>
@@ -487,39 +818,7 @@
               <div class="thumbnail-small m-b-30">
                 <a href="#">
                   <div class="img-holder">
-                    <img src="assets/images/news09.jpg" alt="news img" />
-                  </div>
-                </a>
-                <div class="thumbnail-content">
-                  <a href="#" class="thumbnail-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </a>
-                  <a href="#" class="news-date m-t-5">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>june 23, 2023</span>
-                  </a>
-                </div>
-              </div>
-              <div class="thumbnail-small m-b-30">
-                <a href="#">
-                  <div class="img-holder">
-                    <img src="assets/images/news05.jpg" alt="news img" />
-                  </div>
-                </a>
-                <div class="thumbnail-content">
-                  <a href="#" class="thumbnail-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </a>
-                  <a href="#" class="news-date m-t-5">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>june 23, 2023</span>
-                  </a>
-                </div>
-              </div>
-              <div class="thumbnail-small m-b-30">
-                <a href="#">
-                  <div class="img-holder">
-                    <img src="assets/images/news09.jpg" alt="news img" />
+                    <img src="images/news09.jpg" alt="news img" />
                   </div>
                 </a>
                 <div class="thumbnail-content">
@@ -554,7 +853,7 @@
             <div class="thumbnail-medium m-b-30">
               <a href="#">
                 <div class="img-holder">
-                  <img src="assets/images/news07.jpg" alt="news img" />
+                  <img src="images/news07.jpg" alt="news img" />
                 </div>
               </a>
               <div class="thumbnail-content">
@@ -591,7 +890,7 @@
             <div class="thumbnail-medium m-b-30">
               <a href="#">
                 <div class="img-holder">
-                  <img src="assets/images/news08.jpg" alt="news img" />
+                  <img src="images/news08.jpg" alt="news img" />
                 </div>
               </a>
               <div class="thumbnail-content">
@@ -628,7 +927,7 @@
             <div class="thumbnail-medium m-b-30">
               <a href="#">
                 <div class="img-holder">
-                  <img src="assets/images/news09.jpg" alt="news img" />
+                  <img src="images/news09.jpg" alt="news img" />
                 </div>
               </a>
               <div class="thumbnail-content">
@@ -685,7 +984,7 @@
                 <div class="thumbnail-medium">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news18.jpg" alt="news img" />
+                      <img src="images/news18.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -720,7 +1019,7 @@
                 <div class="thumbnail-medium">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news17.jpg" alt="news img" />
+                      <img src="images/news17.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -755,7 +1054,7 @@
                 <div class="thumbnail-medium">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news18.jpg" alt="news img" />
+                      <img src="images/news18.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -790,7 +1089,7 @@
                 <div class="thumbnail-medium">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news03.jpg" alt="news img" />
+                      <img src="images/news03.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -825,7 +1124,7 @@
                 <div class="thumbnail-medium">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news07.jpg" alt="news img" />
+                      <img src="images/news07.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -860,7 +1159,7 @@
                 <div class="thumbnail-medium">
                   <a href="#">
                     <div class="img-holder">
-                      <img src="assets/images/news13.jpg" alt="news img" />
+                      <img src="images/news13.jpg" alt="news img" />
                     </div>
                   </a>
                   <div class="thumbnail-content">
@@ -1003,5 +1302,96 @@
 
       <!-- RAJNITIK NEWS SECTION END -->
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_content">
+          <div class="footer_info">
+            <a href="#"
+              ><img class="logo_icon" src="images/logo.png" alt="logo"
+            /></a>
+
+            <ul class="company_info">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit adipisicing elit.</li>
+            </ul>
+
+            <div class="social_link">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer_links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Advertisement</a></li>
+              <li><a href="#">Terms And Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer_teams">
+            <h2>Our Team</h2>
+            <div class="footer_teams_info">
+              <div class="footer_teams_details">
+                <p>CEO</p>
+                <h3>Jhon wick</h3>
+              </div>
+              <div class="footer_teams_details">
+                <p>Chef</p>
+                <h3>Jhon wick</h3>
+              </div>
+              <div class="footer_teams_details">
+                <p>Share Holder</p>
+                <h3>Jhon wick</h3>
+              </div>
+              <div class="footer_teams_details">
+                <p>Share Holder</p>
+                <h3>Jhon wick</h3>
+              </div>
+              <div class="footer_teams_details">
+                <p>Managar</p>
+                <h3>Jhon wick</h3>
+              </div>
+              <div class="footer_teams_details">
+                <p>CTO</p>
+                <h3>Jhon wick</h3>
+              </div>
+            </div>
+            <div class="view_all">
+              <button type="button">VIEW ALL</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="footer_bottom">
+        <div class="container footer_bottom_container">
+          <div class="copy_right_text">
+            <p>Copyright©, 2023 NAGRIKMIRROR pvt ltd, All rights reserved.</p>
+          </div>
+          <div class="back_to_top">
+            <button type="button">
+              BACK TO TOP <span class="fas fa-arrow-up"></span>
+            </button>
+          </div>
+        </div>
+      </div> -->
+    </footer>
   </body>
 </html>
