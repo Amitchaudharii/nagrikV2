@@ -48,22 +48,30 @@ $(document).ready(function () {
 // TAB
 
 $(document).ready(function () {
-  function showInitialTabContent() {
-    var initialTab = $('input[name="tabs"]:checked');
-    var target = initialTab.attr("id").replace("tab-", "");
-    $("#content-" + target).show();
+  // Function to show the initial content for the first set of tabs
+  function showInitialTabContentForFirstSet() {
+    $('.content[id^="content-1"]').hide();
+    $("#content-1-1").show();
+    $("#content-2-1").show();
   }
 
-  showInitialTabContent();
+  // Trigger a click event on the initially checked radio button for the first set of tabs
+  showInitialTabContentForFirstSet();
 
-  $(".input").change(function () {
-    $(".content").hide();
+  // Handle tab switching for the first set of tabs
+  $('.input[name="tabs-1"]').change(function () {
+    $('.content[id^="content-1"]').hide();
+    var target = $(this).attr("id").replace("tab-", "content-");
+    $("#" + target).show();
+  });
 
-    var target = $(this).attr("id").replace("tab-", "");
-    $("#content-" + target).show();
+  // Handle tab switching for the second set of tabs
+  $('.input[name="tabs-2"]').change(function () {
+    $('.content[id^="content-2"]').hide();
+    var target = $(this).attr("id").replace("tab-", "content-");
+    $("#" + target).show();
   });
 });
-
 // TAB END
 
 // SLIDER

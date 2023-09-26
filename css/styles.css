@@ -125,6 +125,10 @@ ul {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -147,6 +151,22 @@ ul {
 
 .auth-name:hover {
   text-decoration: underline;
+}
+
+.heading-label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  padding: 8px 30px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.sticky-section {
+  position: sticky;
+  top: 50px;
 }
 
 .container {
@@ -262,7 +282,7 @@ ul {
 
 .main-header h1 {
   color: var(--secondary-color);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-decoration: none;
 
   display: inline-block;
@@ -335,7 +355,7 @@ ul {
 .tabs-holder {
   border-bottom: solid 3px #dfdfdf;
   padding-bottom: 1px;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .input {
@@ -349,7 +369,7 @@ ul {
   line-height: 1rem;
   margin-right: 1rem;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -374,6 +394,20 @@ ul {
 
 /* TAB END */
 
+/* SAMAJIK NEWS */
+
+.samajik-news-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.famous-news-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* SAMAJIK NEWS END */
+
 /* silder */
 
 .slider-holder {
@@ -393,8 +427,8 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 300px;
-  min-height: 600px;
+  /* height: 300px;
+  min-height: 600px; */
   overflow: hidden;
 }
 
@@ -624,6 +658,7 @@ nav.nav ul li ul li a:hover {
 
 nav.nav ul li ul li a {
   transition: all 0.5s ease;
+  color: var(--primary-color);
 }
 
 /* NAV BAR END */
@@ -1027,6 +1062,23 @@ nav.nav ul li ul li a {
 
 /* MOST READ NEWS SECTION END */
 
+.pradesh-news-holder {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pradesh-main-thumb {
+  grid-column: span 2;
+}
+
+.pradesh-thumb-list {
+  grid-column: span 1;
+}
+
+.pradesh-news-list {
+  grid-column: span 1;
+}
+
 /* WEEKLY HIGHLIGHT */
 
 .weekly-highlight-holder {
@@ -1035,6 +1087,19 @@ nav.nav ul li ul li a {
 }
 
 /* WEEKLY HIGHLIGHT END */
+
+/* SAMACHAR */
+
+.samachar-news-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.samachar-right {
+  position: relative;
+}
+
+/* SAMACHAREND */
 
 /* RAJNITIK NEWS SECTION */
 
@@ -1170,7 +1235,7 @@ nav.nav ul li ul li a {
 }
 
 .footer .footer_content .footer_links ul li a:hover {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .footer .footer_content .footer_teams {
@@ -1307,6 +1372,22 @@ nav.nav ul li ul li a {
   .rajnitik-mirror-post {
     grid-column: 1;
   }
+
+  .samachar-right {
+    display: none;
+  }
+
+  .pradesh-news-holder {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .pradesh-main-thumb {
+    grid-column: span 1;
+  }
+
+  .famous-news-holder {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 767px) {
@@ -1321,6 +1402,18 @@ nav.nav ul li ul li a {
 
   .rajnitik-mirror-post-holder {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .footer_content {
+    flex-direction: column;
+  }
+  .footer .footer_content .footer_info {
+    width: 100%;
+  }
+  .footer .footer_content .footer_links {
+    width: 100%;
+  }
+  .footer .footer_content .footer_teams {
+    width: 100%;
   }
 }
 
@@ -1343,6 +1436,13 @@ nav.nav ul li ul li a {
 
   .thumbnail-desc-large {
     font-size: 2rem;
+  }
+  .samachar-news-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .famous-news-holder {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
