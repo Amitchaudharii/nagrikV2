@@ -1274,7 +1274,7 @@ nav.nav ul li ul li a {
 }
 
 .footer .footer_content .footer_info {
-  width: 35%;
+  width: 40%;
 }
 
 .footer .footer_content .footer_info h1 {
@@ -1335,7 +1335,7 @@ nav.nav ul li ul li a {
 
 .footer .footer_content h2 {
   margin-bottom: 20px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
 }
