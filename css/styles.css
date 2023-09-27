@@ -241,7 +241,14 @@ ul {
   font-weight: 600;
 }
 
+.white-thumbnail-desc {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .thumbnail-desc:hover,
+.white-thumbnail-desc:hover,
 .thumbnail-desc-medium:hover,
 .thumbnail-desc-large:hover {
   color: var(--primary-color);
@@ -331,6 +338,23 @@ ul {
   color: var(--primary-color);
 }
 
+.more-button:hover .more-icon {
+  transform: translate(3px, 0);
+}
+
+.white-more-button {
+  color: white;
+  font-size: 1rem;
+}
+
+.white-more-button:hover {
+  color: var(--primary-color);
+}
+
+.white-more-button:hover .more-icon {
+  transform: translate(3px, 0);
+}
+
 .small-header {
   color: #3c3c3c;
   font-size: 1.2rem;
@@ -368,6 +392,7 @@ ul {
   font-size: 1rem;
   line-height: 1rem;
   margin-right: 1rem;
+  padding-bottom: 4px;
   font-weight: 700;
   /* text-transform: uppercase; */
   border: none;
@@ -408,7 +433,12 @@ ul {
 
 /* SAMAJIK NEWS END */
 
-/* silder */
+/* SLIDER */
+
+.thumb-slider-wrapper {
+  background-color: #161922;
+  padding: 50px 0;
+}
 
 .slider-holder {
   margin: 0 10px;
@@ -438,6 +468,37 @@ ul {
   height: 500px;
   max-height: 500px;
   min-height: 500px;
+}
+
+.slider-arrows {
+  position: relative;
+  margin-right: -50px;
+  margin-left: -50px;
+}
+
+.arrow {
+  border: none;
+  outline: none;
+  background-color: #dfdfdf;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.arrow-right {
+  position: absolute;
+  top: -300px;
+  right: 0;
+}
+
+.arrow-left {
+  position: absolute;
+  top: -300px;
+  left: 0;
 }
 
 /* .slick-prev,
@@ -1018,6 +1079,28 @@ nav.nav ul li ul li a {
 
 /* LATEST NEWS SECTION END*/
 
+.entertainment {
+  background-color: #161922;
+  padding: 50px 0;
+}
+
+.entertainment-news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* NAGRIK MIRROR */
+.nagrik-mirror-holder {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.nagrik-mirror-left {
+  grid-column: span 2;
+}
+
+/* NAGRIK MIRROR END */
+
 /* EXCLUSIVE NEWS SECTION */
 
 .exclusive-news-holder {
@@ -1176,6 +1259,14 @@ nav.nav ul li ul li a {
   background: green;
 }
 
+.gallery-holder {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.gallery-left {
+  grid-column: span 2;
+}
+
 .footer .footer_content {
   display: flex;
   gap: 20px;
@@ -1324,11 +1415,17 @@ nav.nav ul li ul li a {
 }
 
 /* MEDIA QUERY */
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .container {
     width: 90%;
   }
 }
+
+/* @media (max-width: 1300px) {
+  .container {
+    width: 90%;
+  }
+} */
 
 @media (max-width: 1199px) {
   /* HEADER */
@@ -1345,6 +1442,11 @@ nav.nav ul li ul li a {
 
   .rajnitik-mirror-post-holder {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .slider-arrows {
+    /* display: none; */
+    margin: 0 20px;
   }
 }
 

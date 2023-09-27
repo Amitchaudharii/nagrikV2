@@ -104,6 +104,14 @@ $(document).ready(function () {
       },
     ],
   });
+  // Add custom click event handlers for the arrow buttons
+  $(".arrow-left").click(function () {
+    $(".slider").slick("slickPrev");
+  });
+
+  $(".arrow-right").click(function () {
+    $(".slider").slick("slickNext");
+  });
 });
 
 // SLIDER END
