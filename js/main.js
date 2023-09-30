@@ -45,6 +45,13 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".more-link").click(function (e) {
+    e.preventDefault();
+    $(".side-nav-dropdown").slideToggle();
+  });
+});
+
 // TAB
 
 $(document).ready(function () {

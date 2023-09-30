@@ -231,7 +231,13 @@ ul {
 
 .thumbnail-desc-medium {
   color: #000;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.thumbnail-large-desc {
+  color: #000;
+  font-size: 1.7rem;
   font-weight: 600;
 }
 
@@ -249,6 +255,7 @@ ul {
 
 .thumbnail-desc:hover,
 .white-thumbnail-desc:hover,
+.thumbnail-large-desc:hover,
 .thumbnail-desc-medium:hover,
 .thumbnail-desc-large:hover {
   color: var(--primary-color);
@@ -427,7 +434,11 @@ ul {
 
 .section-six-holder {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.section-six-box .thumbnail-small:last-child {
+  margin: 0;
 }
 
 /* SAMAJIK NEWS END */
@@ -717,6 +728,7 @@ nav.nav ul li ul li a:hover {
 }
 
 nav.nav ul li ul li a {
+  display: block;
   transition: all 0.5s ease;
   color: var(--primary-color);
 }
@@ -752,140 +764,6 @@ nav.nav ul li ul li a {
   border-bottom: solid 2px var(--secondary-color) !important;
 }
 
-/* 
-.search-bar input,
-.search-btn,
-.search-btn:before,
-.search-btn:after {
-  transition: all 0.25s ease-out;
-}
-.search-bar input,
-.search-btn {
-  width: 3em;
-  height: 3em;
-}
-.search-bar input:invalid:not(:focus),
-.search-btn {
-  cursor: pointer;
-}
-.search-bar,
-.search-bar input:focus,
-.search-bar input:valid {
-  width: 100%;
-}
-.search-bar input:focus,
-.search-bar input:not(:focus) + .search-btn:focus {
-  outline: transparent;
-}
-.search-bar {
-  margin: auto;
-  padding: 5px 0;
-  justify-content: center;
-  max-width: 30em;
-}
-.search-bar input {
-  background: transparent;
-  border-radius: 1.5em;
-  box-shadow: 0 0 0 0.4em #d9d9d9 inset;
-  padding: 0.75em;
-  transform: translate(0.5em, 0.5em) scale(0.5);
-  transform-origin: 100% 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: #171717;
-}
-.search-bar input::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-.search-bar input:focus,
-.search-bar input:valid {
-  background: #fff;
-  border-radius: 0.375em 0 0 0.375em;
-  box-shadow: 0 0 0 0.1em #d9d9d9 inset;
-  transform: scale(1);
-  border: none;
-  height: 2.5em;
-}
-.search-btn {
-  background: #d9d9d9;
-  border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
-  padding: 0.75em;
-  position: relative;
-  transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
-  transform-origin: 0 50%;
-  border: none;
-  height: 2.5em;
-}
-.search-btn:before,
-.search-btn:after {
-  content: "";
-  display: block;
-  opacity: 0;
-  position: absolute;
-}
-.search-btn:before {
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.2em #f1f1f1 inset;
-  top: 0.75em;
-  left: 0.75em;
-  width: 1.2em;
-  height: 1.2em;
-}
-.search-btn:after {
-  background: #f1f1f1;
-  border-radius: 0 0.25em 0.25em 0;
-  top: 51%;
-  left: 51%;
-  width: 0.75em;
-  height: 0.25em;
-  transform: translate(0.2em, 0) rotate(45deg);
-  transform-origin: 0 50%;
-}
-.search-btn span {
-  display: inline-block;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-}
-
-
-.search-bar input:focus + .search-btn,
-.search-bar input:valid + .search-btn {
-  background: var(--primary-color);
-  border-radius: 0 0.375em 0.375em 0;
-  transform: scale(1);
-}
-.search-bar input:focus + .search-btn:before,
-.search-bar input:focus + .search-btn:after,
-.search-bar input:valid + .search-btn:before,
-.search-bar input:valid + .search-btn:after {
-  opacity: 1;
-}
-.search-bar input:focus + .search-btn:hover,
-.search-bar input:valid + .search-btn:hover,
-.search-bar input:valid:not(:focus) + .search-btn:focus {
-  background: #0c48db;
-}
-.search-bar input:focus + .search-btn:active,
-.search-bar input:valid + .search-btn:active {
-  transform: translateY(1px);
-}
-
-@media screen and (prefers-color-scheme: dark) {
-  .search-bar input {
-    box-shadow: 0 0 0 0.4em #f1f1f1 inset;
-  }
-  .search-bar input:focus,
-  .search-bar input:valid {
-    background: #d9d9d9;
-    box-shadow: 0 0 0 0.1em #d9d9d9 inset;
-  }
-  .search-btn {
-    background: #f1f1f1;
-  }
-} */
-
 /* SEARCH END */
 
 /* SIDEBAR */
@@ -902,6 +780,8 @@ nav.nav ul li ul li a {
   padding: 20px;
   transition: transform 0.3s;
   z-index: 999;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .overlay {
@@ -990,8 +870,6 @@ nav.nav ul li ul li a {
 }
 
 .side-nav-dropdown {
-  visibility: hidden;
-  opacity: 0;
   margin-top: 10px;
   margin-left: 10px;
   display: none;
@@ -999,16 +877,12 @@ nav.nav ul li ul li a {
   border-radius: 4px;
 }
 
-.side-nav ul li:hover > ul,
+/* .side-nav ul li:hover > ul,
 .side-nav-dropdown:hover {
   visibility: visible;
   opacity: 1;
   display: block;
-  /* min-width: 250px;
-  text-align: left;
-  padding-top: 20px;
-  box-shadow: 0px 3px 5px -1px #ccc; */
-}
+} */
 
 /* SIDEBAR END */
 
@@ -1074,6 +948,11 @@ nav.nav ul li ul li a {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.section-two-list .thumbnail-small:last-child {
+  margin-bottom: 0;
+  margin: 0;
 }
 
 /* LATEST NEWS SECTION END*/
@@ -1159,6 +1038,21 @@ nav.nav ul li ul li a {
 
 .pradesh-news-list {
   grid-column: span 1;
+}
+
+.pradesh-news-list .border-bottom:last-child {
+  border: none;
+  margin: 0;
+}
+
+.section-twelve-news-list .border-bottom:last-child {
+  border: none;
+  margin: 0;
+}
+
+.section-three-list .border-bottom:last-child {
+  border: none;
+  margin: 0;
 }
 
 /* WEEKLY HIGHLIGHT */
@@ -1264,6 +1158,11 @@ nav.nav ul li ul li a {
 }
 .section-thirteen-left {
   grid-column: span 2;
+}
+
+.footer {
+  background-color: #f1f2f1;
+  border-top: solid #efefef 2px;
 }
 
 .footer .footer_content {
@@ -1447,6 +1346,14 @@ nav.nav ul li ul li a {
     /* display: none; */
     margin: 0 20px;
   }
+
+  .section-ten-holder {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  .section-ten-left {
+    grid-column: span 1;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1488,6 +1395,22 @@ nav.nav ul li ul li a {
 
   .section-six-holder {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section-thirteen-holder {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .section-thirteen-left {
+    grid-column: span 1;
+  }
+
+  .section-ten-holder {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  .section-ten-left {
+    grid-column: span 1;
   }
 }
 
