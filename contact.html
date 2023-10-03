@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/main.js"></script>
+
+    <title>Contact | NagrikV2</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <header class="header m-b-30">
+      <div class="container">
+        <div class="header-top">
+          <ul class="trending-tags gap-30">
+            <li><a href="#" class="tags-list"> नेकपा एमाले </a></li>
+            <li><a href="#" class="tags-list"> नेपाली फिल्म </a></li>
+            <li><a href="#" class="tags-list"> कर्मचारी </a></li>
+            <li><a href="#" class="tags-list">प्रशासन</a></li>
+            <li><a href="#" class="tags-list"> सुन तस्करी </a></li>
+            <li><a href="#" class="tags-list"> इन्द्रजात्रा </a></li>
+          </ul>
+          <div class="ads gap-30">
+            <a href="#">
+              <img src="images/adslarge.gif" alt="ads" />
+            </a>
+            <a href="#">
+              <img src="images/adslarge02.gif" alt="ads" />
+            </a>
+          </div>
+        </div>
+
+        <div class="header-logo">
+          <div class="logo-holder">
+            <a href="#">
+              <img src="images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="update_date gap-10">
+            <a href="#"> <span>Sat, Sep 29, 2023 </span> </a>|
+            <a href="#">
+              <span> १२ असोज २०८०, शुक्रबार</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <div class="container">
+          <div class="nav-bar-wrapper">
+            <div class="nav-list-wrapper">
+              <button id="toggleSidebar" class="hamburger-button">
+                <i class="fas fa-bars"></i>
+              </button>
+              <nav class="nav">
+                <ul>
+                  <li>
+                    <a href="#" class="nav-items">होमपेज</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">समाचार</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">विजनेस</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">जीवनशैली</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">सुशासन </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">खेलकुद </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">कला </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">मनोरन्जन</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-items">अन्य &dtrif;</a>
+                    <ul class="more-dropdown">
+                      <li><a href="#">प्रमुख समाचार</a></li>
+                      <li><a href="#">राजनीति</a></li>
+                      <li><a href="#">अर्थ</a></li>
+                      <li><a href="#">सुशासन </a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <form action="" class="search-bar flex gap-10">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="search"
+                name="search"
+                placeholder="Search"
+                pattern=".*\S.*"
+                required
+                class="search-input"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="side-header">
+          <a href="#"
+            ><img class="logo_icon" src="images/logo.png" alt="logo"
+          /></a>
+
+          <button type="button" id="closeSidebar" class="toggle_close">
+            <span class="fas fa-times"></span>
+          </button>
+        </div>
+        <form action="" class="search-bar flex gap-10 m-b-20">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="search"
+            name="search"
+            placeholder="Search"
+            pattern=".*\S.*"
+            required
+            class="search-input"
+          />
+        </form>
+        <nav class="side-nav">
+          <ul>
+            <li>
+              <a href="#" class="side-nav-items"> होमपेज </a>
+            </li>
+            <li>
+              <a href="#" class="side-nav-items"> समाचार </a>
+            </li>
+            <li>
+              <a href="#" class="side-nav-items"> विजनेस </a>
+            </li>
+            <li>
+              <a href="#" class="side-nav-items"> जीवनशैली </a>
+            </li>
+            <li>
+              <a href="#" class="side-nav-items"> सुशासन </a>
+            </li>
+            <li>
+              <a href="#" class="side-nav-items"> खेलकुद </a>
+            </li>
+
+            <li>
+              <a href="#" class="side-nav-items more-link">
+                <span class="flex justify-between items-center">
+                  अन्य <i class="fas fa-angle-right"></i>
+                </span>
+              </a>
+              <ul class="side-nav-dropdown">
+                <li class="side-nav-dropdown-li">
+                  <a href="#" class="side-dropdown-items">प्रमुख समाचार</a>
+                </li>
+                <li class="side-nav-dropdown-li">
+                  <a href="#" class="side-dropdown-items">राजनीति</a>
+                </li>
+                <li class="side-nav-dropdown-li">
+                  <a href="#" class="side-dropdown-items">अर्थ</a>
+                </li>
+                <li class="side-nav-dropdown-li">
+                  <a href="#" class="side-dropdown-items">सुशासन</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="side-nav-items"> मनोरन्जन </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="overlay" id="overlay"></div>
+      <!-- SIDEBAR END -->
+    </header>
+
+    <!-- HEADER END -->
+
+    <!-- ADS -->
+    <div class="ads gap-10">
+      <div class="container">
+        <a href="#">
+          <img src="images/adslarge02.gif" alt="ads" />
+        </a>
+      </div>
+    </div>
+    <!-- ADS END -->
+
+    <main>
+      <section class="breadcrumb m-y-30">
+        <div class="container">
+          <div class="breadcrumb-wrapper">
+            <a href="#" class="thumbnail-desc">Home</a>
+            <i class="fas fa-angle-right"></i>
+            <span class="breadcrumb-child-text">Contact</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="result-section m-y-30">
+        <div class="container">
+          <div class="result-section-wrapper gap-30">
+            <div class="result-section-right">
+              <div class="main-header">
+                <h1>CONTACT INFO</h1>
+              </div>
+              <div class="contact-info">
+                <div class="contact-info-wrapper">
+                  <h3>Address</h3>
+                  <div class="contact-details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kathmandu, Nepal</span>
+                  </div>
+                </div>
+                <div class="contact-info-wrapper">
+                  <h3>Phone</h3>
+                  <div class="contact-details">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>9712345678</p>
+                  </div>
+                  <div class="contact-details">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>9812345678</p>
+                  </div>
+                </div>
+                <div class="contact-info-wrapper">
+                  <h3>Email</h3>
+                  <div class="contact-details">
+                    <i class="far fa-envelope"></i>
+                    <p>info@gmail.com</p>
+                  </div>
+                  <div class="contact-details">
+                    <i class="far fa-envelope"></i>
+                    <p>info.tech@gmail.com</p>
+                  </div>
+                </div>
+                <div class="contact-info-wrapper">
+                  <h3>Follow</h3>
+                  <div class="contact-details">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-pinterest-p"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="result-section-left">
+              <div class="main-header">
+                <h1>GET IN TOUCH</h1>
+              </div>
+              <form class="contact-form">
+                <div class="col">
+                  <div class="row">
+                    <div class="col m-0">
+                      <input
+                        type="text"
+                        id="name2"
+                        name="name2"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
+                    <div class="col m-0">
+                      <input
+                        type="email"
+                        id="email2"
+                        name="email2"
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="url"
+                      id="website"
+                      name="website"
+                      placeholder="Website"
+                    />
+                  </div>
+                  <div class="col">
+                    <textarea
+                      id="comment"
+                      name="comment"
+                      placeholder="Comment"
+                      rows="8"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="contact_submit">
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- MAP -->
+          <div class="map">
+            <div class="main-header">
+              <h1>MAP</h1>
+            </div>
+            <div class="location_map">
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe
+                    class="gmap_iframe"
+                    width="100%"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    src="https://maps.google.com/maps?width=600&amp;height=500&amp;hl=en&amp;q=kathmandu&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  ></iframe
+                  ><a href="https://gachanymph.com/">Gacha Nymph Download</a>
+                </div>
+                <style>
+                  .mapouter {
+                    position: relative;
+                    text-align: right;
+                    width: 100%;
+                    height: 500px;
+                  }
+                  .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    width: 100%;
+                    height: 500px;
+                  }
+                  .gmap_iframe {
+                    height: 500px !important;
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_content">
+          <div class="footer_info">
+            <ul class="company_info">
+              <li>सूचना विभाग दर्ता नं.: ३०५९/०७८–०७९</li>
+              <li>अध्यक्ष तथा प्रधान सम्पादक : एसके कायस्थ</li>
+            </ul>
+            <h2>सम्पर्क</h2>
+
+            <ul class="company_info">
+              <li>One Take Media Pvt.Ltd.</li>
+              <li>New Baneshwor, kathmandu</li>
+              <li>Phone : 9844297818</li>
+              <li>Email : nagarikmirror@gmail.com</li>
+            </ul>
+
+            <div class="social_link">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer_links">
+            <h2>द्रुत लिङ्कहरू</h2>
+            <div class="footer-links-holder gap-30">
+              <ul>
+                <li><a href="#">होमपेज</a></li>
+                <li><a href="#">समाचार</a></li>
+                <li><a href="#">विजनेस</a></li>
+                <li><a href="#">जीवनशैली</a></li>
+                <li><a href="#">मनोरन्जन</a></li>
+                <li><a href="#">विचार</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">होमपेज</a></li>
+                <li><a href="#">समाचार</a></li>
+                <li><a href="#">विजनेस</a></li>
+                <li><a href="#">जीवनशैली</a></li>
+                <li><a href="#">मनोरन्जन</a></li>
+                <li><a href="#">विचार</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">होमपेज</a></li>
+                <li><a href="#">समाचार</a></li>
+                <li><a href="#">विजनेस</a></li>
+                <li><a href="#">जीवनशैली</a></li>
+                <li><a href="#">मनोरन्जन</a></li>
+                <li><a href="#">विचार</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">होमपेज</a></li>
+                <li><a href="#">समाचार</a></li>
+                <li><a href="#">विजनेस</a></li>
+                <li><a href="#">जीवनशैली</a></li>
+                <li><a href="#">मनोरन्जन</a></li>
+                <li><a href="#">विचार</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <div class="footer-logo-holder logo_icon">
+            <a href="#">
+              <img src="images/logo-1.png" alt="" />
+            </a>
+          </div>
+          <div class="copyright">
+            <div class="copyright-content">
+              <p>
+                © 2021 Nagarik Mirror - One Take Media Pvt.Ltd. New Baneswor,
+                Kathmandu.
+              </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="extra-links">
+              <ul>
+                <li><a href="#">About </a></li>
+                <li><a href="#">Advertise </a></li>
+                <li><a href="#">Career</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
