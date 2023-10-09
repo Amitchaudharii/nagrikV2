@@ -85,6 +85,11 @@ ul {
 .m-y-70 {
   margin: 70px 0;
 }
+
+.m-b-70 {
+  margin-bottom: 70px;
+}
+
 .m-t-5 {
   margin-top: 5px;
 }
@@ -1644,6 +1649,10 @@ nav.nav ul li ul li a {
   font-size: 2.5rem;
   line-height: 3rem;
   font-weight: 600;
+}
+
+.result-section-right {
+  position: relative;
 }
 
 /* CHILD PAGE END */
